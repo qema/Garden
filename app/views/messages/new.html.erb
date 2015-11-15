@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="container">
+    <h1>New Message</h1>
+  </div>
+</div>
+
+<div class="create">
+  <table><tr>
+  <td class="tdcompose">
+  <div class="container">
+
+    <%= form_for(@message) do |f| %>
+        <div class="field">
+          <%= f.label "From:" %>
+          <%= f.text_field :sender %>
+        </div>
+        <div class="field">
+          <%= f.label "To:" %>
+          <%= f.text_field :recipient %>
+        </div>
+        <div class="field">
+          <%= f.label "Plot number (optional):" %>
+          <%= f.text_field :plotnumber %>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.label "Message" %>
+          <%= f.text_area :content %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Create" %>
+          <%= link_to "Cancel", "/messages" %>
+        </div>
+
+    <% end %>
+
+   </div>
+  </td>
+  </td><td class="tdimg">  <img src="http://ithacacommunitygardens.org/wp-content/uploads/2015/07/2015_Garden_Plot_Map-with-Title.png" width="40%" height="40%"/>
+</tr></table>
+</div>

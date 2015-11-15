@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="container">
+    <h1>PlotChat</h1>
+    </div>
+</div>
+
+<div class="messages">
+  <table>
+    <tr>
+      <td>
+
+        <%= link_to 'New Message', "messages/new" %>
+        <div class="container">
+          <% @messages.reverse_order.each do |message| %>
+              <div class="message">
+                <p>
+                  <% if message.plotnumber.to_s == '' then s = '' else s = " (Plot " + message.plotnumber.to_s + ")" end %>
+                  From <b><%= message.sender %></b> to <b><%= message.recipient %></b><%= s %>:</p>
+                <p class="content"><%= message.content %></p>
+                <p class="time"><%= message.created_at %></p>
+              </div>
+          <% end %>
+        </div>
+      </td><td class="tdimg">  <img src="http://ithacacommunitygardens.org/wp-content/uploads/2015/07/2015_Garden_Plot_Map-with-Title.png" width="40%" height="40%"/>
+    </td>
+
+    </tr>
+  </table>
+
+</div>

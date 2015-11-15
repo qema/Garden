@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   root 'meta#index'
   post '/charges' => 'charges#test'
+  get "/messages" => "messages#index"
+  get "/messages/new" => "messages#new"
+  post "/messages" => "messages#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
