@@ -4,118 +4,118 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-html, body, p {
-  margin: 1% 5%;
-}
-
-h1 {
-  align: left;
-}
-
-body {
-  background-color: #eee;
-  font-family: 'Roboto', sans-serif;
-}
-
-.container {
-  width: 480px;
-}
-
-.messages, .create {
-  margin: 40px 0;
-}
-
-td {
-  vertical-align: top;
-}
-
-.tdcompose {
-  vertical-align: top;
-}
-
-img {
-  width: 90%;
-  height: auto;
-  margin-left: 5%;
-}
-
-.messages a, a,
-.create .actions input {
-  background-color: #679146;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 12px 24px;
-  transition: background-color 0.5s;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.message {
-  background-color: #fff;
-  font-weight: 300;
-  padding: 16px;
-  margin-bottom: 10px;
-}
-
-p.time {
-  color: #679146;
-  font-size: 12px;
-  margin-top: 12px;
-}
-
-button {
-  background-color: #679146;
-  border: none;
-  color: #679146;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 12px 24px;
-  transition: background-color 0.5s;
-}
-
-button:hover {
-  background-color: #679146;
-  transition: background-color 0.5s;
-}
-
-form label {
-  display: block;
-  width: 100%;
-}
-
-form textarea {
-  border: 1px solid transparent;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  margin: 0px 0 10px;
-  min-height: 100px;
-  padding: 16px;
-  transition: border 0.5s;
-  width: calc(100% - 32px);
-}
-
-form textarea:focus {
-  border: 1px solid #0084d7;
-  box-shadow: 0;
-  outline: 0;
-  transition: border 0.5s;
-}
-
-@media screen and (max-width: 480px) {
-  .container {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .messages, .create {
-    padding: 0 20px;
-  }
-}
+//
+//html, body, p {
+//  margin: 1% 5%;
+//}
+//
+//h1 {
+//  align: left;
+//}
+//
+//body {
+//  background-color: #eee;
+//  font-family: 'Roboto', sans-serif;
+//}
+//
+//.container {
+//  width: 480px;
+//}
+//
+//.messages, .create {
+//  margin: 40px 0;
+//}
+//
+//td {
+//  vertical-align: top;
+//}
+//
+//.tdcompose {
+//  vertical-align: top;
+//}
+//
+//img {
+//  width: 90%;
+//  height: auto;
+//  margin-left: 5%;
+//}
+//
+//.messages a, a,
+//.create .actions input {
+//  background-color: #679146;
+//  border: none;
+//  color: #fff;
+//  cursor: pointer;
+//  font-size: 14px;
+//  margin-top: 10px;
+//  margin-bottom: 10px;
+//  padding: 12px 24px;
+//  transition: background-color 0.5s;
+//  text-decoration: none;
+//  display: inline-block;
+//}
+//
+//.message {
+//  background-color: #fff;
+//  font-weight: 300;
+//  padding: 16px;
+//  margin-bottom: 10px;
+//}
+//
+//p.time {
+//  color: #679146;
+//  font-size: 12px;
+//  margin-top: 12px;
+//}
+//
+//button {
+//  background-color: #679146;
+//  border: none;
+//  color: #679146;
+//  cursor: pointer;
+//  font-size: 14px;
+//  margin-top: 10px;
+//  margin-bottom: 10px;
+//  padding: 12px 24px;
+//  transition: background-color 0.5s;
+//}
+//
+//button:hover {
+//  background-color: #679146;
+//  transition: background-color 0.5s;
+//}
+//
+//form label {
+//  display: block;
+//  width: 100%;
+//}
+//
+//form textarea {
+//  border: 1px solid transparent;
+//  font-family: 'Roboto', sans-serif;
+//  font-size: 14px;
+//  font-weight: 300;
+//  margin: 0px 0 10px;
+//  min-height: 100px;
+//  padding: 16px;
+//  transition: border 0.5s;
+//  width: calc(100% - 32px);
+//}
+//
+//form textarea:focus {
+//  border: 1px solid #0084d7;
+//  box-shadow: 0;
+//  outline: 0;
+//  transition: border 0.5s;
+//}
+//
+//@media screen and (max-width: 480px) {
+//  .container {
+//    width: 100%;
+//    margin: 0 auto;
+//  }
+//
+//  .messages, .create {
+//    padding: 0 20px;
+//  }
+//}

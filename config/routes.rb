@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
 
 
-  root 'meta#index'
+  root 'users#new'
   post '/charges' => 'charges#test'
   get "/messages" => "messages#index"
   get "/messages/new" => "messages#new"
