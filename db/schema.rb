@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114233947) do
+ActiveRecord::Schema.define(version: 20151115021536) do
 
   create_table "meta", force: :cascade do |t|
     t.string   "username"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20151114233947) do
     t.string   "committee5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "workday1"
+    t.string   "workday2"
+    t.string   "workday3"
+    t.string   "workday4"
+    t.string   "workday5"
+    t.string   "workday6"
+    t.string   "workday7"
   end
 
   create_table "users", force: :cascade do |t|
