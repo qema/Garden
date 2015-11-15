@@ -72,6 +72,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:firstname, :lastname, :plotnumber, :returning, :registered, :email, :phone, :address, :city, :state, :zip, :committee1, :committee2, :committee3, :committee4, :committee5, :plotpartners, :contactmethod, :postpermission, :secondplot)
+      params.require(:user).permit(:firstname, :lastname, :plotnumber, :returning, :registered, :email, :phone, :address, :city, :state, :zip, :committee1, :committee2, :committee3, :committee4, :committee5, :plotpartners, :contactmethod, :postpermission, :secondplot, :hours_required, :preferred_committee, :assigned_committee)
     end
 end

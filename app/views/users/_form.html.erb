@@ -36,11 +36,12 @@
     </div>
 
     <div class="field">
-      <label>Plot Number. (For renewing gardners)</label><br>
+      <label>Plot Number. (For renewing gardeners)</label><br>
       <%= f.number_field :plotnumber %>
     </div>
 
 
+    <input type="hidden" name="user[hours_required]" id="user_hours_required" value=4/>
 
 
       <!--To be filled out by admin when a user get registered-->
@@ -135,36 +136,34 @@
         <%= f.label :zip %><br>
         <%= f.text_field :zip, class: 'form-control', required: true %>
       </div>
-        <% unless @meta.committee1.to_s == '' %>
-          <div class="field">
-            <%= f.label @meta.committee1 %><br>
-            <%= f.text_field :committee1 %>
-          </div>
-        <% end %>
-        <% unless @meta.committee2.to_s == '' %>
-            <div class="field">
-              <%= f.label @meta.committee2 %><br>
-              <%= f.text_field :committee2 %>
-            </div>
-        <% end %>
-        <% unless @meta.committee3.to_s == '' %>
-            <div class="field">
-              <%= f.label @meta.committee3 %><br>
-              <%= f.text_field :committee3 %>
-            </div>
-        <% end %>
-        <% unless @meta.committee4.to_s == '' %>
-            <div class="field">
-              <%= f.label @meta.committee4 %><br>
-              <%= f.text_field :committee4 %>
-            </div>
-        <% end %>
-        <% unless @meta.committee5.to_s == '' %>
-            <div class="field">
-              <%= f.label @meta.committee5 %><br>
-              <%= f.text_field :committee5 %>
-            </div>
-        <% end %>
+
+
+    <% unless @meta.committee1.to_s == '' and @meta.committee2.to_s == '' and @meta.committee3.to_s == '' and @meta.committee4.to_s == '' and @meta.committee5.to_s == '' %>
+    <div class="field">
+      <fieldset>
+        <label for="user_preferred_committee">Preferred Committee:</label><br/>
+        <select name="user[preferred_committee]" id="user_preferred_committee" class="form-control" required>
+          <option value=''> None </option>
+          <% unless @meta.committee1.to_s == '' %>
+              <option value=<%= @meta.committee1 %> > <%= @meta.committee1 %> </option>
+          <% end %>
+          <% unless @meta.committee2.to_s == '' %>
+              <option value=<%= @meta.committee2 %> > <%= @meta.committee2 %> </option>
+          <% end %>
+          <% unless @meta.committee3.to_s == '' %>
+              <option value=<%= @meta.committee3 %> > <%= @meta.committee3 %> </option>
+          <% end %>
+          <% unless @meta.committee4.to_s == '' %>
+              <option value=<%= @meta.committee4 %> > <%= @meta.committee4 %> </option>
+          <% end %>
+          <% unless @meta.committee5.to_s == '' %>
+              <option value=<%= @meta.committee5 %> > <%= @meta.committee5 %> </option>
+          <% end %>
+        </select>
+      </fieldset>
+    </div>
+    <% end %>
+
       <div class="field">
         <label>Plot Partners</label><br>
         <%= f.text_field :plotpartners %>
@@ -196,7 +195,7 @@
         </label>
       </div>
       <div class="field">
-        <label>I am a returning gardner in good standing, interested in a second plot.</label><br>
+        <label>I am a returning gardener in good standing, interested in a second plot.</label><br>
         <label class="radio-inline">
           <!-- <%= f.label :secondplot %><br> -->
           <%= f.radio_button :secondplot, 'Yes', class: 'form-control' %> Yes
@@ -209,7 +208,7 @@
 
 
     <div class="container">
-      <h3>Community Garden agreement</h3>
+      <h3>Community Garden Agreement</h3>
 
       <h5>● I will not hold Project Growing Hope, Inc. or the City of Ithaca liable for any injury that may occur to me or to anyone I invite to the Community Gardens site.</h5>
       <h5>● My membership and plot use period begins with plot assignment or renewal each year, and ends(unless renewed) at the following year’s spring renewal. I will spend at least 4 hours this season working for the garden at workdays or as otherwise arranged, or to pay a no¬work fee of $10 per hour not worked.

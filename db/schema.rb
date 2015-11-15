@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115081203) do
+ActiveRecord::Schema.define(version: 20151115112055) do
 
   create_table "meta", force: :cascade do |t|
     t.string   "username"
@@ -53,9 +53,11 @@ ActiveRecord::Schema.define(version: 20151115081203) do
     t.string   "contactmethod"
     t.string   "postpermission"
     t.integer  "secondplot"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "hours_required"
+    t.string   "preferred_committee"
+    t.string   "assigned_committee"
   end
 
 end
