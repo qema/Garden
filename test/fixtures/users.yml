@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyString
+  lastname: MyString
+  plotnumber: 1
+  returning: MyString
+  registered: MyString
+  email: MyString
+  phone: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  committee1: MyString
+  committee2: MyString
+  committee3: MyString
+  committee4: MyString
+  committee5: MyString
+  plotpartners: MyString
+  contactmethod: MyString
+  postpermission: MyString
+  secondplot: 1
+
+two:
+  firstname: MyString
+  lastname: MyString
+  plotnumber: 1
+  returning: MyString
+  registered: MyString
+  email: MyString
+  phone: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  committee1: MyString
+  committee2: MyString
+  committee3: MyString
+  committee4: MyString
+  committee5: MyString
+  plotpartners: MyString
+  contactmethod: MyString
+  postpermission: MyString
+  secondplot: 1

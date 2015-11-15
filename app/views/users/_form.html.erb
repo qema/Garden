@@ -1,0 +1,107 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :plotnumber %><br>
+    <%= f.number_field :plotnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :returning %><br>
+    <%= f.text_field :returning %>
+  </div>
+  <div class="field">
+    <%= f.label :registered %><br>
+    <%= f.text_field :registered %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.number_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+<% unless @meta.committee1.to_s == '' %>
+  <div class="field">
+    <%= f.label @meta.committee1 %><br>
+    <%= f.text_field :committee1 %>
+  </div>
+<% end %>
+    <% unless @meta.committee2.to_s == '' %>
+        <div class="field">
+          <%= f.label @meta.committee2 %><br>
+          <%= f.text_field :committee2 %>
+        </div>
+    <% end %>
+    <% unless @meta.committee3.to_s == '' %>
+        <div class="field">
+          <%= f.label @meta.committee3 %><br>
+          <%= f.text_field :committee3 %>
+        </div>
+    <% end %>
+    <% unless @meta.committee4.to_s == '' %>
+        <div class="field">
+          <%= f.label @meta.committee4 %><br>
+          <%= f.text_field :committee4 %>
+        </div>
+    <% end %>
+    <% unless @meta.committee5.to_s == '' %>
+        <div class="field">
+          <%= f.label @meta.committee5 %><br>
+          <%= f.text_field :committee5 %>
+        </div>
+    <% end %>
+  <div class="field">
+    <%= f.label :plotpartners %><br>
+    <%= f.text_field :plotpartners %>
+  </div>
+  <div class="field">
+    <%= f.label :contactmethod %><br>
+    <%= f.text_field :contactmethod %>
+  </div>
+  <div class="field">
+    <%= f.label :postpermission %><br>
+    <%= f.text_field :postpermission %>
+  </div>
+  <div class="field">
+    <%= f.label :secondplot %><br>
+    <%= f.number_field :secondplot %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

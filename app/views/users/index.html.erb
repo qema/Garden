@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Plot Number</th>
+      <th>Returning</th>
+      <th>Registered</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Committee 1</th>
+      <th>Committee 2</th>
+      <th>Committee 3</th>
+      <th>Committee 4</th>
+      <th>Committee 5</th>
+      <th>Plot Partners</th>
+      <th>Contact Method</th>
+      <th>Post Permission</th>
+      <th>Second Plot</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.firstname %></td>
+        <td><%= user.lastname %></td>
+        <td><%= user.plotnumber %></td>
+        <td><%= user.returning %></td>
+        <td><%= user.registered %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.address %></td>
+        <td><%= user.city %></td>
+        <td><%= user.state %></td>
+        <td><%= user.zip %></td>
+        <td><%= user.committee1 %></td>
+        <td><%= user.committee2 %></td>
+        <td><%= user.committee3 %></td>
+        <td><%= user.committee4 %></td>
+        <td><%= user.committee5 %></td>
+        <td><%= user.plotpartners %></td>
+        <td><%= user.contactmethod %></td>
+        <td><%= user.postpermission %></td>
+        <td><%= user.secondplot %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %><br>
+<%= link_to("Back to Admin home", :controller => "meta", :action => "index") %>

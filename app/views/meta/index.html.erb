@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ithaca Community Gardens - Admin Panel</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Committee 1</th>
+      <th>Committee 2</th>
+      <th>Committee 3</th>
+      <th>Committee 4</th>
+      <th>Committee 5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meta.each do |metum| %>
+      <tr>
+        <td><%= metum.username %></td>
+        <td>****</td>
+        <td><%= metum.committee1 %></td>
+        <td><%= metum.committee2 %></td>
+        <td><%= metum.committee3 %></td>
+        <td><%= metum.committee4 %></td>
+        <td><%= metum.committee5 %></td>
+        <td><%= link_to 'Edit', edit_metum_path(metum) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<%= link_to("Manage Users", :controller => "users", :action => "index") %>
+   <br>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password: MyString
+  committee1: MyString
+  committee2: MyString
+  committee3: MyString
+  committee4: MyString
+  committee5: MyString
+
+two:
+  username: MyString
+  password: MyString
+  committee1: MyString
+  committee2: MyString
+  committee3: MyString
+  committee4: MyString
+  committee5: MyString
