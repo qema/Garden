@@ -11,121 +11,232 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :firstname %><br>
-    <%= f.text_field :firstname, required: true %>
-  </div>
-  <div class="field">
-    <%= f.label :lastname %><br>
-    <%= f.text_field :lastname, required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :plotnumber %><br>
-    <%= f.number_field :plotnumber %>
-  </div>
-
-  <div class="field">
-    <%= f.label :returning %><br>
-    <%= f.text_field :returning %>
-  </div>
-
-  <div class="field">
-    <label>
-      Returning customer.
-    </label><br>
-    <label class="radio-inline col-md-offset-1">
-      <!-- <%= f.label :returning %><br> -->
-      <%= f.radio_button :returning, 'Yes' %> Yes
-    </label>
-    <label class="radio-inline col-md-offset-1">
-      <!-- <%= f.label :returning %><br> -->
-      <%= f.radio_button :returning, 'No', :checked => true %> No
-    </label>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :registered %><br>
-    <%= f.text_field :registered %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email, required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone, required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address, required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city, required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state, required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip, required: true %>
-  </div>
-    <% unless @meta.committee1.to_s == '' %>
+  <div class="container">
       <div class="field">
-        <%= f.label @meta.committee1 %><br>
-        <%= f.text_field :committee1 %>
+        <label>First Name</label><br>
+        <%= f.text_field :firstname, class: 'form-control', required: true %>
       </div>
-    <% end %>
-    <% unless @meta.committee2.to_s == '' %>
-        <div class="field">
-          <%= f.label @meta.committee2 %><br>
-          <%= f.text_field :committee2 %>
-        </div>
-    <% end %>
-    <% unless @meta.committee3.to_s == '' %>
-        <div class="field">
-          <%= f.label @meta.committee3 %><br>
-          <%= f.text_field :committee3 %>
-        </div>
-    <% end %>
-    <% unless @meta.committee4.to_s == '' %>
-        <div class="field">
-          <%= f.label @meta.committee4 %><br>
-          <%= f.text_field :committee4 %>
-        </div>
-    <% end %>
-    <% unless @meta.committee5.to_s == '' %>
-        <div class="field">
-          <%= f.label @meta.committee5 %><br>
-          <%= f.text_field :committee5 %>
-        </div>
-    <% end %>
-  <div class="field">
-    <%= f.label :plotpartners %><br>
-    <%= f.text_field :plotpartners %>
-  </div>
-  <div class="field">
-    <%= f.label :contactmethod %><br>
-    <%= f.text_field :contactmethod %>
-  </div>
-  <div class="field">
-    <%= f.label :postpermission %><br>
-    <%= f.text_field :postpermission %>
-  </div>
-  <div class="field">
-    <%= f.label :secondplot %><br>
-    <%= f.number_field :secondplot %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+      <div class="field">
+        <label>Last Name</label><br>
+        <%= f.text_field :lastname, class: 'form-control', required: true %>
+      </div>
+
+    <div class="field">
+      <label>
+        Returning customer.
+      </label><br>
+      <label class="radio-inline">
+        <!-- <%= f.label :returning %><br> -->
+        <%= f.radio_button :returning, 'Yes' %> Yes
+      </label>
+      <label class="radio-inline">
+        <!-- <%= f.label :returning %><br> -->
+        <%= f.radio_button :returning, 'No', :checked => true %> No
+      </label>
+    </div>
+
+    <div class="field">
+      <label>Plot Number. (For renewing gardners)</label><br>
+      <%= f.number_field :plotnumber %>
+    </div>
+
+
+
+
+      <!--To be filled out by admin when a user get registered-->
+      <!--<div class="field">-->
+        <!--<%= f.label :registered %><br> -->
+        <!--<%= f.text_field :registered %>-->
+      <!--</div>-->
+
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email, class: 'form-control', required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone, class: 'form-control', required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :address %><br>
+        <%= f.text_field :address, class: 'form-control', required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.text_field :city, class: 'form-control', required: true %>
+      </div>
+
+
+
+    <div class="field">
+      <fieldset>
+        <label for="user_state">State:</label><br/>
+        <select name="user[state]" id="user_state" class="form-control" required>
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="DC">DC</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+        </select>
+      </fieldset>
+    </div>
+
+
+      <div class="field">
+        <%= f.label :zip %><br>
+        <%= f.text_field :zip, class: 'form-control', required: true %>
+      </div>
+        <% unless @meta.committee1.to_s == '' %>
+          <div class="field">
+            <%= f.label @meta.committee1 %><br>
+            <%= f.text_field :committee1 %>
+          </div>
+        <% end %>
+        <% unless @meta.committee2.to_s == '' %>
+            <div class="field">
+              <%= f.label @meta.committee2 %><br>
+              <%= f.text_field :committee2 %>
+            </div>
+        <% end %>
+        <% unless @meta.committee3.to_s == '' %>
+            <div class="field">
+              <%= f.label @meta.committee3 %><br>
+              <%= f.text_field :committee3 %>
+            </div>
+        <% end %>
+        <% unless @meta.committee4.to_s == '' %>
+            <div class="field">
+              <%= f.label @meta.committee4 %><br>
+              <%= f.text_field :committee4 %>
+            </div>
+        <% end %>
+        <% unless @meta.committee5.to_s == '' %>
+            <div class="field">
+              <%= f.label @meta.committee5 %><br>
+              <%= f.text_field :committee5 %>
+            </div>
+        <% end %>
+      <div class="field">
+        <label>Plot Partners</label><br>
+        <%= f.text_field :plotpartners %>
+      </div>
+      <div class="field">
+        <label>Best Contact Method</label><br>
+        <label class="radio-inline">
+          <!-- <%= f.label :contactmethod %><br> -->
+          <%= f.radio_button :contactmethod, 'Email', class: 'form-control', :checked => true %> Email
+        </label>
+        <label class="radio-inline">
+          <!-- <%= f.label :contactmethod %><br> -->
+          <%= f.radio_button :contactmethod, 'Phone', class: 'form-control' %> Phone
+        </label>
+        <label class="radio-inline">
+          <!-- <%= f.label :contactmethod %><br> -->
+          <%= f.radio_button :contactmethod, 'Mail', class: 'form-control' %> Mail
+        </label>
+      </div>
+      <div class="field">
+        <label>I give permission to include my name, plot#, & this email address:</label><br>
+        <label class="radio-inline">
+          <!-- <%= f.label :postpermission %><br> -->
+          <%= f.radio_button :postpermission, 'Yes', class: 'form-control' %> Yes
+        </label>
+        <label class="radio-inline">
+          <!-- <%= f.label :postpermission %><br> -->
+          <%= f.radio_button :postpermission, 'No', class: 'form-control', :checked => true %> No
+        </label>
+      </div>
+      <div class="field">
+        <label>I am a returning gardner in good standing, interested in a second plot.</label><br>
+        <label class="radio-inline">
+          <!-- <%= f.label :secondplot %><br> -->
+          <%= f.radio_button :secondplot, 'Yes', class: 'form-control' %> Yes
+        </label>
+        <label class="radio-inline">
+          <!-- <%= f.label :secondplot %><br> -->
+          <%= f.radio_button :secondplot, 'No', class: 'form-control', :checked => true %> No
+        </label>
+      </div>
+
+
+    <div class="container">
+      <h3>Community Garden agreement</h3>
+
+      <h5>● I will not hold Project Growing Hope, Inc. or the City of Ithaca liable for any injury that may occur to me or to anyone I invite to the Community Gardens site.</h5>
+      <h5>● My membership and plot use period begins with plot assignment or renewal each year, and ends(unless renewed) at the following year’s spring renewal. I will spend at least 4 hours this season working for the garden at workdays or as otherwise arranged, or to pay a no¬work fee of $10 per hour not worked.
+      </h5>
+      <h5>● I will maintain the paths around my plot at all times, and tend my plot on a regular basis to keep it neat and free of weeds and other debris. If I neglect or abandon my plot (soil not turned by May 31st, or plot overgrown with tall weeds), it may be mowed or reassigned to another gardener on the waiting list.
+      </h5>
+      <h5>● Tools belonging to the Gardens are marked “Community Gardens” or “PGH” and they’re all we’ve got. I will never remove them from the Gardens site. After using them, I will clean and return them to the proper toolshed and lock the shed.
+      </h5>
+      <h5>● I will keep the path next to my plot cut short or mulched if I place stakes, fencing, or trellises less than 6 inches from perimeter of my plot, which can interfere with mowing.
+      </h5>
+      <h5>● I will clean my plot at the end of the season (dead plant matter into compost bin, remove all trash) and also remove my own stakes, etc. (please leave corner boundary stakes!), if I will not be returning next season.
+      </h5>
+      <h5>● I will not use chemical, non¬organic herbicides, pesticides, and fertilizers, or plastic mulch.
+      </h5>
+      <h5>● Failure to comply with these and other established Community Gardens rules and policies, included those listed below, may result in the loss of my gardening plot.
+      </h5>
+
+      <div class="field">
+        <label><input type="checkbox" name="agree" value="" unchecked required> <h3 style="display: inline-block">I agree to the terms stated above.</h3></label>
+      </div>
+    </div>
+
+
+
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+
   </div>
 <% end %>
