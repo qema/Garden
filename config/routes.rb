@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   resources :meta
+  resources :charges
   resources :users
 
+
   root 'meta#index'
+  post '/charges' => 'charges#test'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

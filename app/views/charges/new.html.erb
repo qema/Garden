@@ -1,0 +1,77 @@
+
+    <article>
+      <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+      <% end %>
+      <label class="amount">
+        <!--<span>Amount: $5.00</span> -->
+      </label>
+    </article>
+
+    <%= stylesheet_link_tag "css/style" %>
+
+    <body class="landing">
+      <!--Header -->
+      <header id="header" class="alt">
+        <h1><a href="index.html">Project Growing Hope</a></h1>
+        <a href="#nav">Menu</a>
+      </header>
+
+      <section id="banner">
+        <i class="icon fa-diamond"></i>
+        <h2>Payment Options</h2>
+        <p>Please Select one of the Following Plans:</p>
+        <ul class="actions">
+          <table>
+            <tr><td>Participate</td><td>Adopt a Plot</td><td>Generous Donations</td></tr>
+            <tr>
+              <td>
+                <%= form_tag charges_path do %>
+                    <input type="hidden" name="amount" value="1500" />
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                        data-description="A yearly subscription"
+                        data-amount="1500"
+                        <%=@@amount = 1500 %>
+                        data-name="Participate"
+                        data-locale="auto"></script>
+                <% end %>
+                </td>
+              <td>
+                <%= form_tag charges_path do %>
+                    <input type="hidden" name="amount" value="4000" />
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+
+                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                        data-description="A yearly subscription"
+                        data-amount="4000"
+
+                        data-name="Adopt a Plot"
+                        data-locale="auto"></script>
+                  <% end %>
+                </td>
+              <td>
+                <%= form_tag charges_path do %>
+                    <input type="hidden" name="amount" value="100000" />
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                        data-description="A yearly subscription"
+                        <%=@@amount = 10000 %>
+                        data-name="Generous Donation"
+                        data-locale="auto"></script>
+                <% end %>
+              </td>
+            </tr>
+          </table>
+
+
+          <!-- <li><a href="#" class="button big special">Learn More</a></li>
+          <li><a href="#" class="button big special">Learn More</a></li>
+          <li><a href="#" class="button big special">Learn More</a></li> -->
+        </ul>
+      </section>
+
+    <!--<h2>Payment:</h2> -->
+    <!--<%= image_tag("code-bq.jpg", :alt=>"Garden View", width: "400", height: "200"  )%>-->
