@@ -13,54 +13,78 @@
 
   <div class="field">
     <%= f.label :firstname %><br>
-    <%= f.text_field :firstname %>
+    <%= f.text_field :firstname, required: true %>
   </div>
   <div class="field">
     <%= f.label :lastname %><br>
-    <%= f.text_field :lastname %>
+    <%= f.text_field :lastname, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :plotnumber %><br>
     <%= f.number_field :plotnumber %>
   </div>
+
   <div class="field">
     <%= f.label :returning %><br>
     <%= f.text_field :returning %>
   </div>
+
+  <div class="field">
+    <label>
+      Returning customer.
+    </label><br>
+    <label class="radio-inline col-md-offset-1">
+      <!-- <%= f.label :returning %><br> -->
+      <%= f.radio_button :returning, 'Yes' %> Yes
+    </label>
+    <label class="radio-inline col-md-offset-1">
+      <!-- <%= f.label :returning %><br> -->
+      <%= f.radio_button :returning, 'No', :checked => true %> No
+    </label>
+  </div>
+
+
   <div class="field">
     <%= f.label :registered %><br>
     <%= f.text_field :registered %>
   </div>
+
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :city %><br>
-    <%= f.text_field :city %>
+    <%= f.text_field :city, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :state %><br>
-    <%= f.text_field :state %>
+    <%= f.text_field :state, required: true %>
   </div>
+
   <div class="field">
     <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
+    <%= f.text_field :zip, required: true %>
   </div>
-<% unless @meta.committee1.to_s == '' %>
-  <div class="field">
-    <%= f.label @meta.committee1 %><br>
-    <%= f.text_field :committee1 %>
-  </div>
-<% end %>
+    <% unless @meta.committee1.to_s == '' %>
+      <div class="field">
+        <%= f.label @meta.committee1 %><br>
+        <%= f.text_field :committee1 %>
+      </div>
+    <% end %>
     <% unless @meta.committee2.to_s == '' %>
         <div class="field">
           <%= f.label @meta.committee2 %><br>
